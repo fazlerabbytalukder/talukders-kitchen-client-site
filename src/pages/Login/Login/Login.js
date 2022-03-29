@@ -4,6 +4,8 @@ import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import googleLogo from '../../../images/google logo.png';
 import logo from '../../../images/logo.png';
+import Navigation from '../../Shared/Navigation/Navigation';
+import regImg from '../../../images/login-signup img.jpg';
 
 const Login = () => {
     const [loginData, SetLoginData] = useState({})
@@ -33,15 +35,16 @@ const Login = () => {
         signInWithGoogle(location,history)
     }
     return (
-        <Container>
+        <div style={{ backgroundColor: 'black' }}>
+            <Navigation></Navigation>
+            <Container>
             <Grid container spacing={1}>
-                <Grid item sx={{ mt: 8, boxShadow: 3, mx:'auto' }} xs={12} md={6}>
-                    <img style={{width:"200px"}} src={logo} alt="" />
-                    <Typography variant="body1" gutterBottom>
+                <Grid style={{backgroundColor:'#FFD9B0'}} item sx={{ my: 5, boxShadow: 3, mx:'auto' }} xs={12} md={6}>
+                    <Typography className='reg-title' variant="body1" gutterBottom>
                         Login
                     </Typography>
                     <form onSubmit={handleLoginSubmit}>
-                        <TextField
+                            <TextField
                             sx={{ width: "75%", m: 1 }}
                             name="email"
                             type="email"
@@ -58,17 +61,21 @@ const Login = () => {
                             onChange={handleOnChange}
                             type="password"
                             size="small" />
-                        <Button variant="contained" sx={{ width: "75%", m: 1 }} type="submit">Login</Button> <br />
-                        <Button sx={{my:2}} variant="text">--------------------- OR ---------------------</Button> <br />
-                        <Button onClick={handleGoogleSignIn} sx={{ width: "75%", m: 1 }} variant="outlined"><img src={googleLogo} alt="" style={{width:'25px'}}/>  Sign In With Google</Button> <br />
-                        <NavLink style={{ textDecoration: 'none' }} to='/register'><Button sx={{my:2}} variant="text">New User? Please Register</Button></NavLink>
+                        <Button variant="contained" sx={{ width: "75%", m: 1, backgroundColor:'black' }} type="submit">Login</Button> <br />
+                        <Button sx={{my:2, color:'black'}} variant="text">--------------------- OR ---------------------</Button> <br />
+                        <Button onClick={handleGoogleSignIn} sx={{ width: "75%", m: 1, color:'black', border:'1px solid black' }} variant="outlined"><img src={googleLogo} alt="" style={{width:'25px'}}/>  Sign In With Google</Button> <br />
+                        <NavLink style={{ textDecoration: 'none' }} to='/register'><Button sx={{my:2, color:'black'}} variant="text">New User? Please Register</Button></NavLink>
                     </form>
                     {isLoading && <CircularProgress />}
-                    {user?.email && <Alert severity="success">User Created Successfully!</Alert>}
+                    {user?.email && <Alert sx={{color:'black'}} severity="success">User Created Successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
-                </Grid>
+                    </Grid>
+                    <Grid item sx={{ my: 5, boxShadow: 3, mx: 'auto' }} xs={12} md={6}>
+                    <img className='img-fluid' src={regImg} alt="" />
+                    </Grid>
             </Grid>
         </Container>
+        </div>
     );
 };
 
