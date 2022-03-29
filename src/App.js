@@ -9,7 +9,7 @@ import PrivateRoute from './pages/Login/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <AuthProvider>
         <BrowserRouter>
           <Switch>

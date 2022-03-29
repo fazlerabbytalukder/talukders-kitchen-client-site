@@ -4,3 +4,22 @@
     text-decoration: none!important;
     text-transform: capitalize!important;
 }
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.button-1{
+    padding: 5px 10px!important;
+    background-color: #DCCA87!important;
+    margin-left: .5rem!important;
+    color: black!important;
+    font-weight: bold!important;
+}
+
+.button-1:hover{
+    background-color: transparent!important;
+    border: 1px solid #DCCA87!important;
+    color: white!important;
+}
