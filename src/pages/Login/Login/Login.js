@@ -39,7 +39,7 @@ const Login = () => {
             <Navigation></Navigation>
             <Container>
             <Grid container spacing={1}>
-                <Grid style={{backgroundColor:'#FFD9B0'}} item sx={{ my: 5, boxShadow: 3, mx:'auto' }} xs={12} md={6}>
+                <Grid style={{backgroundColor:'#DCCA87'}} item sx={{ my: 5, boxShadow: 3, mx:'auto' }} xs={12} md={6}>
                     <Typography className='reg-title' variant="body1" gutterBottom>
                         Login
                     </Typography>
