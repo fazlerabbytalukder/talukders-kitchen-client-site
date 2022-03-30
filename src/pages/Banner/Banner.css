@@ -6,4 +6,5 @@
 .horizontal-text{
     writing-mode: vertical-rl;
     color: #DCCA87;
+    cursor: pointer;
 }
