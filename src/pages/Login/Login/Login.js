@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import googleLogo from '../../../images/google logo.png';
-import logo from '../../../images/logo.png';
 import Navigation from '../../Shared/Navigation/Navigation';
 import regImg from '../../../images/login-signup img.jpg';
 
@@ -61,7 +60,7 @@ const Login = () => {
                             onChange={handleOnChange}
                             type="password"
                             size="small" />
-                        <Button variant="contained" sx={{ width: "75%", m: 1, backgroundColor:'black' }} type="submit">Login</Button> <br />
+                        <Button className='button-2' variant="contained" sx={{ width: "75%", m: 1 }} type="submit">Login</Button> <br />
                         <Button sx={{my:2, color:'black'}} variant="text">--------------------- OR ---------------------</Button> <br />
                         <Button onClick={handleGoogleSignIn} sx={{ width: "75%", m: 1, color:'black', border:'1px solid black' }} variant="outlined"><img src={googleLogo} alt="" style={{width:'25px'}}/>  Sign In With Google</Button> <br />
                         <NavLink style={{ textDecoration: 'none' }} to='/register'><Button sx={{my:2, color:'black'}} variant="text">New User? Please Register</Button></NavLink>
