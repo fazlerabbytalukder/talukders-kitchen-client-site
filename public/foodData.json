@@ -1,0 +1,138 @@
+[
+    {
+        "id": 1,
+        "foodName": "Beef Tehari Full Pack",
+        "category": "Lunch/Dinner",
+        "price":250,
+        "img": "https://i.ibb.co/BZc9Rkd/Beef-Tehari-Full-Pack-Tk-250-Everyday-Lunch.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 2,
+        "foodName": "Elish Polao Single Plate",
+        "category": "Lunch/Dinner",
+        "price":350,
+        "img": "https://i.ibb.co/yWsYZCL/Elish-Polao-Single-Plate-Tk-350-Every-Tuesday-Thursday.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 3,
+        "foodName": "Classic Veggie Pizza Medium",
+        "category": "Fast-Food",
+        "price":655,
+        "img": "https://i.ibb.co/K5qfrry/Classic-Veggie-Pizza-Medium-655-tk.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 4,
+        "foodName": "Classic Lasagna",
+        "category": "Fast-Food",
+        "price":510,
+        "img": "https://i.ibb.co/9VyVW3n/Lasagna-510tk.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 4,
+        "foodName": "Chicken Roast Quarter",
+        "category": "Lunch/Dinner",
+        "price":140,
+        "img": "https://i.ibb.co/x2g6TX9/Chicken-Roast-Quarter-per-ps-140-tk.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 5,
+        "foodName": "Roasted Garlic Chicken Pizza",
+        "category": "Fast-Food",
+        "price":1410,
+        "img": "https://i.ibb.co/VwKvCrN/Roasted-Garlic-Chicken-Pizza-Large-1410tk.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 6,
+        "foodName": "Jali Kabab",
+        "category": "Lunch/Dinner",
+        "price":70,
+        "img": "https://i.ibb.co/7NskQtW/Jali-Kabab-per-ps-70-tk.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 7,
+        "foodName": "Kabuli Polao Family box",
+        "category": "Lunch/Dinner",
+        "price":1000,
+        "img": "https://i.ibb.co/TkvRVbb/Kabuli-Polao-Family-box-1000-tk.jpg",
+        "star": 3,
+        "description": ""
+    },
+    {
+        "id": 8,
+        "foodName": "Morog Polao Single Plate",
+        "category": "Lunch/Dinner",
+        "price":250,
+        "img": "https://i.ibb.co/k50KyGH/Morog-Polao-Single-Plate-Tk-250-Everyday.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 9,
+        "foodName": "Mutton Kacchi Biriyani Full Plate",
+        "category": "Lunch/Dinner",
+        "price":450,
+        "img": "https://i.ibb.co/z2vKnb3/Mutton-Kacchi-Biriyani-Full-Plate-Tk-350-Lunch.jpg",
+        "star": 3,
+        "description": ""
+    },
+    {
+        "id": 10,
+        "foodName": "Beef Tehari Full Pack",
+        "category": "Lunch/Dinner",
+        "price":250,
+        "img": "https://i.ibb.co/BZc9Rkd/Beef-Tehari-Full-Pack-Tk-250-Everyday-Lunch.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 11,
+        "foodName": "Special Bhutti Kacchi",
+        "category": "Lunch/Dinner",
+        "price":350,
+        "img": "https://i.ibb.co/9b3bqx0/Special-Bhutti-Kacchi-Full-Packet-Tk-350.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 12,
+        "foodName": "Penne Alla Forno White sauce",
+        "category": "Fast-Food",
+        "price":499,
+        "img": "https://i.ibb.co/NKS05r7/Penne-Alla-Forno-White-sauce-mozzarella-cheese-499-tk.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 13,
+        "foodName": "Potato-Wedges",
+        "category": "Fast-Food",
+        "price":195,
+        "img": "https://i.ibb.co/3vVnW7m/Potato-Wedges-195-tk.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 13,
+        "foodName": "Salad Bar Small",
+        "category": "Fast-Food",
+        "price":245,
+        "img": "https://i.ibb.co/6vKJkPB/Salad-Bar-Small-245-tk.jpg",
+        "star": 4,
+        "description": ""
+    }
+]
+
