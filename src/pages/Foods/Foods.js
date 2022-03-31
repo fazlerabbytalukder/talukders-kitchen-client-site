@@ -12,13 +12,11 @@ const Foods = () => {
     }, [])
     return (
         <Container>
-            <Typography style={{ fontWeight: '700', size: '35px', margin: '25px 0' }} variant="h4" gutterBottom component="div">
-                Our Top <span style={{ color: '#8A513D' }}>Foods</span>
-            </Typography>
-            <Box style={{margin:'50px 0', alignItems:'center'}}>
+            <h1>Our Top <span style={{ color: '#DCCA87' }}>Foods</span></h1>
+            <Box style={{ margin: '50px 0', alignItems: 'center' }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
-                        foods.slice(0,6).map(food => <Food
+                        foods.slice(0, 8).map(food => <Food
                             key={food._id}
                             food={food}
                         ></Food>)

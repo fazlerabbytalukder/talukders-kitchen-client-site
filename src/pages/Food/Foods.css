@@ -1,0 +1,18 @@
+.card-image{
+    height: 10rem;
+}
+
+.food-card{
+    background-color: transparent!important;
+    border: 2px solid #DCCA87!important;
+    border-radius: .6rem!important;
+}
+
+.food-title{
+    color: #DCCA87;
+    font-weight: 600;
+}
+
+.food-category{
+    color: white;
+}
