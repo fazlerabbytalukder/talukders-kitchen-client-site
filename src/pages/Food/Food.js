@@ -7,13 +7,15 @@ const Food = (props) => {
     return (
         <Grid item xs={4} sm={4} md={3}>
             <Card className='food-card' sx={{ border: 0, boxShadow: 2 }}>
+                <div class="position-relative">
                 <CardMedia
                     className='card-image'
                     component="img"
                     image={img}
                     alt="Paella dish"
                 />
-                <Rating style={{marginTop:'1rem'}} name="read-only" value={star} readOnly />
+                <Rating class="position-absolute top-0 start-0 d-flex rating-width" style={{marginTop:'.5rem', marginLeft:'.5rem', color:'#8A513D'}} name="read-only" value={star} readOnly />
+                </div>
                 <CardContent>
                     <h4 className='food-title'>{foodName}</h4>
                     <Typography style={{ color: '#8A513D', fontSize: '20px' }} variant="h6" color="text.secondary">
