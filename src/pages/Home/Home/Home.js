@@ -3,6 +3,7 @@ import About from '../../About/About';
 import Banner from '../../Banner/Banner';
 import FindUs from '../../FindUs/FindUs';
 import Foods from '../../Foods/Foods';
+import Footer from '../../Footer/Footer';
 import IntroVideo from '../../IntroVideo/IntroVideo';
 import OurChef from '../../OurChef/OurChef';
 import OurLaurels from '../../OurLaurels/OurLaurels';
@@ -20,6 +21,7 @@ const Home = () => {
             <OurLaurels></OurLaurels>
             <IntroVideo></IntroVideo>
             <FindUs></FindUs>
+            <Footer></Footer>
         </div>
     );
 };
