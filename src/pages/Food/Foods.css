@@ -3,9 +3,11 @@
 }
 
 .food-card{
-    background-color: transparent!important;
-    border: 2px solid #DCCA87!important;
-    border-radius: .6rem!important;
+    background: rgba(255, 255, 255, 0.151)!important;
+    backdrop-filter: blur( 1px )!important;
+    -webkit-backdrop-filter: blur( 1px )!important;
+    border-radius: 10px!important;
+    border: 1px solid rgba( 255, 255, 255, 0.18 )!important;
 }
 
 .food-title{
