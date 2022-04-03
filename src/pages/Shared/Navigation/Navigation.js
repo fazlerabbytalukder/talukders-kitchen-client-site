@@ -20,7 +20,7 @@ const Navigation = () => {
                             <Link style={{ textDecoration: 'none' }} to='/home'><Button className='button-common'>Home</Button></Link>
                         </li>
                         <li className="nav-item">
-                            <Link style={{ textDecoration: 'none' }} to='/allProducts'><Button className='button-common'>Recipes</Button></Link>
+                            <Link style={{ textDecoration: 'none' }} to='/allrecipes'><Button className='button-common'>Recipes</Button></Link>
                         </li>
                         <li className="nav-item">
                             <Link style={{ textDecoration: 'none' }} to='/blog'><Button className='button-common'>Blog</Button></Link>

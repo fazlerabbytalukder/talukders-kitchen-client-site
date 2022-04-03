@@ -1,9 +1,9 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Food from '../Food/Food';
+import AllFood from '../AllFood/AllFood';
+import Navigation from '../Shared/Navigation/Navigation';
 
-const Foods = () => {
+const AllFoods = () => {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
@@ -12,21 +12,23 @@ const Foods = () => {
             .then(data => setFoods(data));
     }, [])
     return (
-        <Container>
-            <h1>Our Top <span style={{ color: '#DCCA87' }}>Foods</span></h1>
+        <div>
+            <Navigation></Navigation>
+            <Container>
+            <h1>Our All <span style={{ color: '#DCCA87' }}>Foods</span></h1>
             <Box style={{ margin: '50px 0', alignItems: 'center' }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
-                        foods.slice(0, 8).map(food => <Food
+                        foods.map(food => <AllFood
                             key={food._id}
                             food={food}
-                        ></Food>)
+                        ></AllFood>)
                     }
                 </Grid>
             </Box>
-            <Link to='/allrecipes'><button className='button-1'>See All Foods</button></Link>
         </Container>
+        </div>
     );
 };
 
-export default Foods;
+export default AllFoods;

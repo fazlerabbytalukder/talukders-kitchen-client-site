@@ -133,6 +133,131 @@
         "img": "https://i.ibb.co/6vKJkPB/Salad-Bar-Small-245-tk.jpg",
         "star": 4,
         "description": ""
+    },
+    {
+        "id": 14,
+        "foodName": "Beef supreme bunsnpatty",
+        "category": "Fast-Food",
+        "price":999,
+        "img": "https://i.ibb.co/ZTZYpp6/Beef-supreme-by-bunsnpatty-999.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 15,
+        "foodName": "Burger Double size",
+        "category": "Fast-Food",
+        "price":300,
+        "img": "https://i.ibb.co/xgxmfp6/Burger-Double-size-300.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 16,
+        "foodName": "Burger Single Size",
+        "category": "Fast-Food",
+        "price":150,
+        "img": "https://i.ibb.co/6JX4J1f/Burger-Single-Size-150.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 17,
+        "foodName": "Chicken hot and sour",
+        "category": "Fast-Food",
+        "price":250,
+        "img": "https://i.ibb.co/J28PMmG/Chicken-hot-and-sour-250.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 18,
+        "foodName": "coffee",
+        "category": "Fast-Food",
+        "price":150,
+        "img": "https://i.ibb.co/7CBDCbt/coffee-150.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 19,
+        "foodName": "Fortuna fried chicken",
+        "category": "Fast-Food",
+        "price":299,
+        "img": "https://i.ibb.co/zRBM1YY/Fortuna-fried-chicken-299.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 20,
+        "foodName": "Iftar package",
+        "category": "Fast-Food",
+        "price":300,
+        "img": "https://i.ibb.co/Kh6TNrv/Iftar-package-300.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 21,
+        "foodName": "Italian Pizza",
+        "category": "Fast-Food",
+        "price":300,
+        "img": "https://i.ibb.co/Nx5LDhP/Italian-Pizza-300.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 22,
+        "foodName": "Mas er Chorchori",
+        "category": "Lunch/Dinner",
+        "price":230,
+        "img": "https://i.ibb.co/HGRy83H/Mas-er-Chorchori-230.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 23,
+        "foodName": "Mesbani full",
+        "category": "Lunch/Dinner",
+        "price":999,
+        "img": "https://i.ibb.co/FJnhsj4/Mesbani-full-1000.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 24,
+        "foodName": "Pad thai with game",
+        "category": "Lunch/Dinner",
+        "price":199,
+        "img": "https://i.ibb.co/R9LGDdd/Pad-thai-with-game-on-200.jpg",
+        "star": 3,
+        "description": ""
+    },
+    {
+        "id": 25,
+        "foodName": "Paturi full",
+        "category": "Lunch/Dinner",
+        "price":330,
+        "img": "https://i.ibb.co/QNWb9Yh/Paturi-full-330.jpg",
+        "star": 5,
+        "description": ""
+    },
+    {
+        "id": 26,
+        "foodName": "Thalassery beef biriyani",
+        "category": "Lunch/Dinner",
+        "price":550,
+        "img": "https://i.ibb.co/cxjn27B/Thalassery-beef-biriyani-recipe-550.jpg",
+        "star": 4,
+        "description": ""
+    },
+    {
+        "id": 27,
+        "foodName": "The Dining Room",
+        "category": "Lunch/Dinner",
+        "price":2550,
+        "img": "https://i.ibb.co/bg6jHKt/The-Dining-Room-2599.jpg",
+        "star": 3,
+        "description": ""
     }
 ]
-
