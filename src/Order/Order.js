@@ -67,46 +67,51 @@ const Order = () => {
     return (
         <div>
             <Navigation></Navigation>
-            <div className="container mt-5">
+            <div className="container mt-4">
                 <div className="row">
-                    <div className="col-md-6 justify-content-center align-items-center mb-5">
+                    <div className="col-md-6 justify-content-center align-items-center mb-5 form-bg">
+                        <h2 className='my-4 order-title'>Confirm Your Order Now</h2>
                         <form onSubmit={handleOrderSubmit} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                             <TextField
                                 id="outlined-basic"
                                 defaultValue={user.email}
                                 onBlur={handleOnBlur}
                                 name="email"
-                                sx={{ width: "100%", backgroundColor: "white", mb: 1 }} />
+                                required
+                                sx={{ width: "100%", border:'2px solid black', borderRadius:'.3rem', mb: 2 }} />
                             <TextField
                                 id="outlined-basic"
                                 name="yourName"
                                 defaultValue={user.displayName}
                                 onBlur={handleOnBlur}
-                                sx={{ width: "100%", backgroundColor: "white", mb: 1 }} />
+                                required
+                                sx={{ width: "100%", border:'2px solid black', borderRadius:'.3rem', mb: 2 }} />
                             <TextField
                                 id="outlined-basic"
                                 name="address"
                                 onBlur={handleOnBlur}
-                                label="Your Address"
-                                sx={{ width: "100%", backgroundColor: "white", mb: 1 }} />
+                                placeholder='Your Address'
+                                required
+                                sx={{ width: "100%", border:'2px solid black', borderRadius:'.3rem', mb: 2 }} />
                             <TextField
                                 id="outlined-basic"
                                 name="phone"
                                 onBlur={handleOnBlur}
                                 type="number"
-                                label="Your Number"
-                                sx={{ width: "100%", backgroundColor: "white", mb: 1 }} />
+                                placeholder='Your Number'
+                                required
+                                sx={{ width: "100%", border:'2px solid black', borderRadius:'.3rem', mb: 2 }} />
                             <TextField
                                 id="outlined-basic"
                                 disabled
                                 value={order.foodName}
-                                sx={{ width: "100%", backgroundColor: "white", mb: 1 }} />
-                            {orderSuccess && <Alert style={{ width: '100%', margin: "5px 0" }} severity="success">Order Successfull</Alert>}
-                            <Button type="submit">Book Now</Button>
+                                sx={{ width: "100%", border:'2px solid black', borderRadius:'.3rem', mb: 2 }} />
+                            {orderSuccess && <Alert style={{ width: '100%', backgroundColor:'#DCCA87', border:'2px solid black', margin: "5px 0" }} severity="success">Order Successfull</Alert>}
+                            <Button className='button-2 mb-3' type="submit">Order Now</Button>
                         </form>
                     </div>
                     <div className="col-md-6 justify-content-center align-items-center mb-5">
-                        <img style={{height:'25rem'}} className='img-fluid' src={order.img} alt="" />
+                        <img className='img-fluid rounded' src={order.img} alt="" />
                     </div>
                 </div>
             </div>
