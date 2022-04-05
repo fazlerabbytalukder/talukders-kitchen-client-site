@@ -16,6 +16,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MyOrders from '../MyOrders/MyOrders';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -31,6 +33,7 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
+            <Link to='/home'><Button color="inherit">Go to Home</Button></Link>
             <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>
