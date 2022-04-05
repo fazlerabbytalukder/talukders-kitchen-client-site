@@ -16,14 +16,29 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MyOrders from '../MyOrders/MyOrders';
-import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
-const drawerWidth = 240;
+import {
+    Switch,
+    Route,
+    Link,
+    useRouteMatch
+} from "react-router-dom";
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AddFood from '../AddFood/AddFood';
+import useAuth from '../../../Hooks/useAuth';
+
+
+
+const drawerWidth = 200;
 
 function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    //admin non admin
+    const { admin, user, logout } = useAuth();
+
+    let { path, url } = useRouteMatch();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -34,16 +49,18 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             <Link to='/home'><Button color="inherit">Go to Home</Button></Link>
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+            {
+                admin ?
+                    <Box>
+                        <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                        <Link to={`${url}/addFood`}><Button color="inherit">Add Food</Button></Link>
+                    </Box>
+                    :
+                    <Box>
+                        <Link to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
+                    </Box>
+            }
+            <Button onClick={logout} color="inherit">Logout</Button>
         </div>
     );
 
@@ -111,9 +128,20 @@ function Dashboard(props) {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
-                <Typography paragraph>
-                    <MyOrders></MyOrders>
-                </Typography>
+                <Switch>
+                    <Route exact path={path}>
+                        <MyOrders></MyOrders>
+                    </Route>
+                    <Route exact path={`${path}/myOrders`}>
+                        <MyOrders></MyOrders>
+                    </Route>
+                    <Route exact path={`${path}/makeAdmin`}>
+                        <MakeAdmin></MakeAdmin>
+                    </Route>
+                    <Route exact path={`${path}/addFood`}>
+                        <AddFood></AddFood>
+                    </Route>
+                </Switch>
             </Box>
         </Box>
     );
