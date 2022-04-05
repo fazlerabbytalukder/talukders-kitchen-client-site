@@ -8,6 +8,7 @@ import Register from './pages/Login/Register/Register';
 import PrivateRoute from './pages/Login/Login/PrivateRoute/PrivateRoute';
 import AllFoods from './pages/AllFoods/AllFoods';
 import Order from './Order/Order';
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <PrivateRoute path='/order/:orderId'>
               <Order></Order>
+            </PrivateRoute>
+            <PrivateRoute path='/dashboard'>
+              <Dashboard></Dashboard>
             </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
