@@ -1,8 +1,14 @@
 import { Button, Card, CardContent, CardMedia, Grid, Rating, Typography } from '@mui/material';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const AllFood = (props) => {
     const { _id, foodName, category, img, description, price, star } = props.food;
+    const history = useHistory();
+
+    const handleOrderClick = () => {
+        history.push(`/order/${_id}`);
+    }
     return (
         <Grid item xs={4} sm={4} md={3}>
             <Card className='food-card' sx={{ border: 0, boxShadow: 2 }}>
@@ -22,7 +28,7 @@ const AllFood = (props) => {
                     </Typography>
                     <h5 className='food-category'>{category}</h5>
                 </CardContent>
-                <Button className='button-1' style={{ width: '90%', backgroundColor: '#8A513D', marginBottom: '20px' }} variant="contained">Order Now</Button>
+                <Button onClick={handleOrderClick} className='button-1' style={{ width: '90%', backgroundColor: '#8A513D', marginBottom: '20px' }} variant="contained">Order Now</Button>
             </Card>
         </Grid>
     );
