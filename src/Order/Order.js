@@ -111,7 +111,7 @@ const Order = () => {
                         </form>
                     </div>
                     <div className="col-md-6 justify-content-center align-items-center mb-5">
-                        <img className='img-fluid rounded' src={order.img} alt="" />
+                        <img className='img-fluid rounded' src={`data:image/jpeg;base64,${order.img}`} alt="" />
                     </div>
                 </div>
             </div>

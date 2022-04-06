@@ -9,7 +9,7 @@ const MyOrder = ({ handleDelete, myOrder }) => {
                 <CardMedia
                     component="img"
                     style={{ width: 'auto', height: '100px', margin: '0 auto', marginTop: '10px', borderRadius: '50%' }}
-                    image={img}
+                    image={`data:image/jpeg;base64,${img}`}
                     alt="Paella dish"
                 />
                 <CardContent>
