@@ -1,9 +1,86 @@
-import React from 'react';
+import { Button, Input, TextField } from '@mui/material';
+import React, { useState } from 'react';
 
 const AddFood = () => {
+    const [foodName, setFoodName] = useState('');
+    const [categoryName, setCategoryName] = useState('');
+    const [price, setPrice] = useState(0);
+    const [star, setStar] = useState(0);
+    const [img, setImg] = useState(null);
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        if (!img) {
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('foodName', foodName);
+        formData.append('category', categoryName);
+        formData.append('price', price);
+        formData.append('star', star);
+        formData.append('img', img);
+
+
+        fetch('http://localhost:5000/foods', {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    console.log('doctor added successfully');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
     return (
         <div>
-            <h1>this is add food page</h1>
+            <h1>Add A Food</h1>
+            <form onSubmit={handleSubmit}>
+                <TextField
+                    id="outlined-basic"
+                    label="Food Name"
+                    required
+                    onChange={e => setFoodName(e.target.value)}
+                    name="foodName"
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+                <TextField
+                    id="outlined-basic"
+                    label="Category Name"
+                    required
+                    onChange={e => setCategoryName(e.target.value)}
+                    name="category"
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+                <TextField
+                    id="outlined-basic"
+                    name="price"
+                    type="number"
+                    required
+                    onChange={e => setPrice(e.target.value)}
+                    label="price"
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+                <TextField
+                    id="outlined-basic"
+                    name="star"
+                    type="number"
+                    required
+                    onChange={e => setStar(e.target.value)}
+                    label="star"
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+                <Input
+                    accept="image/*"
+                    type="file"
+                    onChange={e => setImg(e.target.files[0])}
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+
+
+                <Button variant="contained" type='submit'>
+                    Add Food
+                </Button>
+            </form>
         </div>
     );
 };

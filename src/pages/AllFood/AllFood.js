@@ -16,7 +16,7 @@ const AllFood = (props) => {
                 <CardMedia
                     className='card-image'
                     component="img"
-                    image={img}
+                    image={`data:image/jpeg;base64,${img}`}
                     alt="Paella dish"
                 />
                 <Rating class="position-absolute top-0 start-0 d-flex rating-width" style={{marginTop:'.5rem', marginLeft:'.5rem', color:'#8A513D'}} name="read-only" value={star} readOnly />
