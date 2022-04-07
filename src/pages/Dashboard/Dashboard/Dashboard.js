@@ -21,6 +21,7 @@ import {
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddFood from '../AddFood/AddFood';
 import useAuth from '../../../Hooks/useAuth';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 
 
 
@@ -48,6 +49,7 @@ function Dashboard(props) {
                     <Box>
                         <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
                         <Link to={`${url}/addFood`}><Button color="inherit">Add Food</Button></Link>
+                        <Link to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
                     </Box>
                     :
                     <Box>
@@ -134,6 +136,9 @@ function Dashboard(props) {
                     </Route>
                     <Route exact path={`${path}/addFood`}>
                         <AddFood></AddFood>
+                    </Route>
+                    <Route exact path={`${path}/manageAllOrders`}>
+                        <ManageAllOrders></ManageAllOrders>
                     </Route>
                 </Switch>
             </Box>
