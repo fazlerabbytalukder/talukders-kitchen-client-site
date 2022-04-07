@@ -11,6 +11,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MyOrders from '../MyOrders/MyOrders';
 import { Button } from '@mui/material';
+import './Dashboard.css';
 
 import {
     Switch,
