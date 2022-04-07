@@ -62,6 +62,7 @@ const ManageAllOrders = () => {
                             <TableCell align="center">Name</TableCell>
                             <TableCell align="center">email</TableCell>
                             <TableCell align="center">Food</TableCell>
+                            <TableCell align="center">Date/Time</TableCell>
                             <TableCell align="center">status</TableCell>
                             <TableCell align="center">approval</TableCell>
                             <TableCell align="center">Action</TableCell>
@@ -76,6 +77,7 @@ const ManageAllOrders = () => {
                                 <TableCell align="center">{row.yourName}</TableCell>
                                 <TableCell align="center">{row.email}</TableCell>
                                 <TableCell align="center">{row.foodName}</TableCell>
+                                <TableCell align="center">{row.dateTime}</TableCell>
                                 <TableCell align="center">{row.status}</TableCell>
                                 <TableCell align="center"><Button onClick={() => handleUpdate(row._id)} variant='contained' style={{backgroundColor:'#8A5143'}}>approve</Button></TableCell>
                                 <TableCell align="center"><Button onClick={() => handleDelete(row._id)} variant='contained' style={{backgroundColor:'#8A5143'}}>Delete</Button></TableCell>

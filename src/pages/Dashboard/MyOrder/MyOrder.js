@@ -2,7 +2,7 @@ import { Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/mat
 import React from 'react';
 
 const MyOrder = ({ handleDelete, myOrder }) => {
-    const {  _id, foodName, category, img, description, price, star, yourName, email, status } = myOrder;
+    const {  _id, foodName, category, img, description, price, star, yourName, email, status, dateTime } = myOrder;
     return (
         <Grid item xs={4} sm={4} md={4}>
             <Card sx={{ minWidth: 200, height: '335px', border: 0, boxShadow: 2 }}>
@@ -24,6 +24,9 @@ const MyOrder = ({ handleDelete, myOrder }) => {
                     </Typography>
                     <Typography style={{ textAlign: 'left', margin: '5px 0' }} variant="body2" color="text.secondary">
                         <b>Price:</b> {price}
+                    </Typography>
+                    <Typography style={{ textAlign: 'left', margin: '5px 0' }} variant="body2" color="text.secondary">
+                        <b>Date/Time:</b> {dateTime}
                     </Typography>
                     <Typography style={{ textAlign: 'left', margin: '5px 0' }} variant="body2" color="text.secondary">
                         <b>Status:</b> {status} {status === "pending" ? <i style={{color:'red'}} class="fas fa-times text-danger fs-5"></i> : <i style={{color:'green'}} className="fas fa-check text-success fs-5"></i>}
