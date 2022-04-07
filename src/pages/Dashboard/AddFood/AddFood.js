@@ -1,9 +1,9 @@
-import { Button, Input, TextField } from '@mui/material';
+import { Autocomplete, Button, Input, TextField } from '@mui/material';
 import React, { useState } from 'react';
 
 const AddFood = () => {
     const [foodName, setFoodName] = useState('');
-    const [categoryName, setCategoryName] = useState('');
+    const [categoryName, setCategoryName] = useState(null);
     const [price, setPrice] = useState(0);
     const [star, setStar] = useState(0);
     const [img, setImg] = useState(null);
@@ -47,13 +47,14 @@ const AddFood = () => {
                     onChange={e => setFoodName(e.target.value)}
                     name="foodName"
                     sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
-                <TextField
-                    id="outlined-basic"
-                    label="Category Name"
-                    required
-                    onChange={e => setCategoryName(e.target.value)}
-                    name="category"
-                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+                <Autocomplete
+                    size='small'
+                    value={categoryName}
+                    onChange={(e, newValue) => setCategoryName(newValue)}
+                    options={["Fast-Food", "Lunch", "Dinner", "All"]}
+                    getOptionLabel={(option) => option}
+                    renderInput={(params) => <TextField {...params} label="Select Category" variant="outlined" />}
+                /> <br />
                 <TextField
                     id="outlined-basic"
                     name="price"
