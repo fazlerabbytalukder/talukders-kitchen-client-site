@@ -1,5 +1,6 @@
 import { Autocomplete, Button, Input, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import foodAddImg from '../../../images/food-added.png';
 
 const AddFood = () => {
     const [foodName, setFoodName] = useState('');
@@ -38,57 +39,65 @@ const AddFood = () => {
     }
     return (
         <div>
-            <h1>Add A Food</h1>
-            <form onSubmit={handleSubmit}>
-                <TextField
-                    id="outlined-basic"
-                    label="Food Name"
-                    required
-                    onChange={e => setFoodName(e.target.value)}
-                    name="foodName"
-                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
-                <Autocomplete
-                    size='small'
-                    value={categoryName}
-                    onChange={(e, newValue) => setCategoryName(newValue)}
-                    options={["Fast-Food", "Lunch/Dinner"]}
-                    getOptionLabel={(option) => option}
-                    renderInput={(params) => <TextField {...params} label="Select Category" variant="outlined" />}
-                /> <br />
-                <TextField
-                    id="outlined-basic"
-                    name="price"
-                    type="number"
-                    required
-                    onChange={e => setPrice(e.target.value)}
-                    label="price"
-                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
-                <TextField
-                    id="outlined-basic"
-                    name="star"
-                    type="number"
-                    required
-                    onChange={e => setStar(e.target.value)}
-                    label="star"
-                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
-                {/* <Input
+            <h1 style={{ color: 'white' }}>Add A Food</h1>
+            <div className="row py-5">
+                <div className="col-md-8 mt-3">
+                    <form onSubmit={handleSubmit}>
+                        <TextField
+                            id="outlined-basic"
+                            placeholder="Food Name"
+                            required
+                            onChange={e => setFoodName(e.target.value)}
+                            name="foodName"
+                            sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
+                        <Autocomplete
+                            size='small'
+                            value={categoryName}
+                            onChange={(e, newValue) => setCategoryName(newValue)}
+                            options={["Fast-Food", "Lunch/Dinner"]}
+                            sx={{ width: "100%", backgroundColor: "white", borderRadius:'.5rem'}}
+                            getOptionLabel={(option) => option}
+                            renderInput={(params) => <TextField {...params} placeholder="Select Food Category" variant="outlined" />}
+                        /> <br />
+                        <TextField
+                            id="outlined-basic"
+                            name="price"
+                            type="number"
+                            required
+                            onChange={e => setPrice(e.target.value)}
+                            placeholder="price"
+                            sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
+                        <TextField
+                            id="outlined-basic"
+                            name="star"
+                            type="number"
+                            required
+                            onChange={e => setStar(e.target.value)}
+                            placeholder="star"
+                            sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
+                        {/* <Input
                     accept="image/*"
                     type="file"
                     onChange={e => setImg(e.target.files[0])}
                     sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br /> */}
-                <TextField
-                    id="outlined-basic"
-                    name="img"
-                    required
-                    onChange={e => setImg(e.target.value)}
-                    label="img-url"
-                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} />
+                        <TextField
+                            id="outlined-basic"
+                            name="img"
+                            required
+                            onChange={e => setImg(e.target.value)}
+                            placeholder="img-url"
+                            sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} />
 
 
-                <Button variant="contained" type='submit'>
-                    Add Food
-                </Button>
-            </form>
+                        <Button className='button-1' type='submit'>
+                            Add Food
+                        </Button>
+                    </form>
+                </div>
+                <div className="col-md-4">
+                    <img className='img-fluid' src={foodAddImg} alt="" />
+                </div>
+            </div>
         </div>
     );
 };
