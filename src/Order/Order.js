@@ -173,7 +173,7 @@ const Order = () => {
                     <div className="col-md-6 justify-content-center align-items-center mb-5">
                         <img
                             className="img-fluid rounded"
-                            src={`data:image/jpeg;base64,${order.img}`}
+                            src={order.img}
                             alt=""
                         />
                         <h4 style={{color:'white', marginTop:'1rem'}}><b style={{color:'#DCCA87'}}>Note:</b> Your order is placed after 1 hour of your order. </h4>

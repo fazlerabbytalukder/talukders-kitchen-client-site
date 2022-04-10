@@ -29,7 +29,7 @@ const AddFood = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    console.log('doctor added successfully');
+                    console.log('Food added successfully');
                 }
             })
             .catch(error => {
@@ -51,7 +51,7 @@ const AddFood = () => {
                     size='small'
                     value={categoryName}
                     onChange={(e, newValue) => setCategoryName(newValue)}
-                    options={["Fast-Food", "Lunch", "Dinner", "All"]}
+                    options={["Fast-Food", "Lunch/Dinner"]}
                     getOptionLabel={(option) => option}
                     renderInput={(params) => <TextField {...params} label="Select Category" variant="outlined" />}
                 /> <br />
@@ -71,11 +71,18 @@ const AddFood = () => {
                     onChange={e => setStar(e.target.value)}
                     label="star"
                     sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
-                <Input
+                {/* <Input
                     accept="image/*"
                     type="file"
                     onChange={e => setImg(e.target.files[0])}
-                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br />
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} /> <br /> */}
+                <TextField
+                    id="outlined-basic"
+                    name="img"
+                    required
+                    onChange={e => setImg(e.target.value)}
+                    label="img-url"
+                    sx={{ width: "50%", backgroundColor: "white", mb: 1 }} />
 
 
                 <Button variant="contained" type='submit'>
