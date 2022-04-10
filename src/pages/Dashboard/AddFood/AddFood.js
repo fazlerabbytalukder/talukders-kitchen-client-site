@@ -65,7 +65,7 @@ const AddFood = () => {
                             type="number"
                             required
                             onChange={e => setPrice(e.target.value)}
-                            placeholder="price"
+                            placeholder="Food Price"
                             sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
                         <TextField
                             id="outlined-basic"
@@ -73,7 +73,7 @@ const AddFood = () => {
                             type="number"
                             required
                             onChange={e => setStar(e.target.value)}
-                            placeholder="star"
+                            placeholder="Give Star"
                             sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
                         {/* <Input
                     accept="image/*"
@@ -85,7 +85,7 @@ const AddFood = () => {
                             name="img"
                             required
                             onChange={e => setImg(e.target.value)}
-                            placeholder="img-url"
+                            placeholder="Set img-url"
                             sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} />
 
 

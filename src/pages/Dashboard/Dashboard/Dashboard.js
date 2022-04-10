@@ -55,7 +55,7 @@ function Dashboard(props) {
                         <Link className='link-button' to={`${url}/manageAllOrders`}><i class="fa-solid fa-gear ms-3 mb-4"></i> <Button color="inherit">Manage All</Button></Link> <br />
                     </Box>
                     :
-                    <Box>
+                    <Box className='text-start'>
                         <Link className='link-button' to={`${url}/myOrders`}><i class="fa-solid fa-square-plus ms-3 mb-4"></i> <Button color="inherit">My Orders</Button></Link>
                     </Box>
             }

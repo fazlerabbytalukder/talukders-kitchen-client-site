@@ -32,10 +32,10 @@ const MakeAdmin = () => {
     return (
         <div className='container'>
             <div className="row py-4">
-                <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <div className="col-md-6 d-flex flex-column justify-content-center">
                     <form onSubmit={handleAdminSubmit}>
                         <TextField
-                            sx={{backgroundColor:'white', borderRadius:'.5rem', marginBottom:'1rem' }}
+                            sx={{backgroundColor:'white', borderRadius:'.5rem', marginBottom:'1rem', width:'100%' }}
                             placeholder="Email"
                             type="email"
                             onBlur={handleOnBlur}
