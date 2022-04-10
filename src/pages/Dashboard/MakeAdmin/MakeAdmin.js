@@ -1,5 +1,7 @@
 import { Alert, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import './MakeAdmin.css';
+import adminImg from '../../../images/admin-image.png';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -14,31 +16,38 @@ const MakeAdmin = () => {
         fetch('http://localhost:5000/users/admin', {
             method: 'PUT',
             headers: {
-                'content-type':'application/json'
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(user)
+            body: JSON.stringify(user)
         })
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
                     setSuccess(true);
-            }
+                }
                 // console.log(data);
-        })
+            })
         e.preventDefault()
     }
     return (
-        <div>
-            <form onSubmit={handleAdminSubmit}>
-                <TextField
-                    sx={{width:"50%"}}
-                    label="Email"
-                    type="email"
-                    onBlur={handleOnBlur}
-                    variant="outlined" />
-                <Button type="submit" variant="contained">Make Admin</Button>
-            </form>
-            {success && <Alert severity="success">Made Admin Successfully</Alert>}
+        <div className='container'>
+            <div className="row py-4">
+                <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <form onSubmit={handleAdminSubmit}>
+                        <TextField
+                            sx={{backgroundColor:'white', borderRadius:'.5rem', marginBottom:'1rem' }}
+                            placeholder="Email"
+                            type="email"
+                            onBlur={handleOnBlur}
+                            variant="outlined" /> <br />
+                        <Button type="submit" className='button-1'>Make Admin</Button>
+                    </form> <br />
+                    <p>{success && <Alert severity="success">Made Admin Successfully</Alert>}</p>
+                </div>
+                <div className="col-md-6 d-flex justify-content-center align-items-center">
+                    <img className='img-fluid' src={adminImg} alt="" />
+                </div>
+            </div>
         </div>
     );
 };

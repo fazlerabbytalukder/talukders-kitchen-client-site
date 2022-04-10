@@ -34,7 +34,7 @@ const MyOrders = () => {
     }
     return (
         <div>
-            <h2 style={{color:'#8A513D', fontWeight:'600', fontSize:'30px'}}>My Orders</h2>
+            <h2 style={{color:'white', fontWeight:'600', fontSize:'30px', marginBottom:'40px'}}>My Orders</h2>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
                         myOrder.map(myOrder => <MyOrder

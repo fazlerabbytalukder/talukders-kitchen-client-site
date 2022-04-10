@@ -44,33 +44,39 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <Link to='/home'><Button color="inherit">Go to Home</Button></Link>
+            <Box className='text-start'>
+                <Link className='link-button' to='/home'><i class="fa-solid fa-house-flag ms-3 mb-4 mt-4"></i> <Button color="inherit">Go to Home</Button></Link>
+            </Box>
             {
                 admin ?
-                    <Box>
-                        <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                        <Link to={`${url}/addFood`}><Button color="inherit">Add Food</Button></Link>
-                        <Link to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
+                    <Box className='text-start'>
+                        <Link className='link-button' to={`${url}/makeAdmin`}><i class="fa-solid fa-user-gear ms-3 mb-4"></i> <Button color="inherit">Make Admin</Button></Link> <br />
+                        <Link className='link-button' to={`${url}/addFood`}><i class="fa-solid fa-square-plus ms-3 mb-4"></i> <Button color="inherit">Add Food</Button></Link> <br />
+                        <Link className='link-button' to={`${url}/manageAllOrders`}><i class="fa-solid fa-gear ms-3 mb-4"></i> <Button color="inherit">Manage All</Button></Link> <br />
                     </Box>
                     :
                     <Box>
-                        <Link to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
+                        <Link className='link-button' to={`${url}/myOrders`}><i class="fa-solid fa-square-plus ms-3 mb-4"></i> <Button color="inherit">My Orders</Button></Link>
                     </Box>
             }
-            <Button onClick={logout} color="inherit">Logout</Button>
+
+            <Box>
+                <i class="fa-solid fa-right-from-bracket"></i> <Button onClick={logout} color="inherit">Logout</Button>
+            </Box>
         </div>
     );
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex', backgroundColor:'black' }}>
+        <Box sx={{ display: 'flex', backgroundColor: 'black' }}>
             <CssBaseline />
             <AppBar
                 position="fixed"
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
+                    backgroundColor: '#DCCA87'
                 }}
             >
                 <Toolbar>
@@ -83,14 +89,14 @@ function Dashboard(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
+                    <Typography style={{color:'black'}} variant="h6" noWrap component="div">
                         Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
             <Box
                 component="nav"
-                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, backgroundColor:'black' }}
+                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, backgroundColor: 'black' }}
                 aria-label="mailbox folders"
             >
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -105,7 +111,7 @@ function Dashboard(props) {
                     sx={{
                         display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                        backgroundColor:'black'
+                        backgroundColor: 'black'
                     }}
                 >
                     {drawer}
@@ -114,7 +120,7 @@ function Dashboard(props) {
                     variant="permanent"
                     sx={{
                         display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth }, backgroundColor:'black'
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth }, backgroundColor: 'black'
                     }}
                     open
                 >
@@ -123,7 +129,7 @@ function Dashboard(props) {
             </Box>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, backgroundColor:'black' }}
+                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, backgroundColor: 'black' }}
             >
                 <Toolbar />
                 <Switch>

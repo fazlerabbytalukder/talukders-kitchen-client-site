@@ -34,3 +34,21 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
+.my-order-card{
+    background: rgba(255, 255, 255, 0.151)!important;
+    backdrop-filter: blur( 1px )!important;
+    -webkit-backdrop-filter: blur( 1px )!important;
+    border-radius: 10px!important;
+    border: 1px solid rgba( 255, 255, 255, 0.18 )!important;
+    height: 31rem!important;
+}
+
+.food-item-text{
+    color:white;
+}
+
+.names{
+    color: #DCCA87;
+    font-weight: bold;
+}
