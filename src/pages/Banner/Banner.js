@@ -2,6 +2,7 @@ import React from 'react';
 import './Banner.css';
 import spoon from '../../images/banner-image-t-kitchen-spoon.png';
 import bannerimg from '../../images/banner-image-t-kitchen.png';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -17,7 +18,7 @@ const Banner = () => {
                         <img width='50px' src={spoon} alt="" />
                         <h1 className='banner-title'>The Key To Fine Dining</h1>
                         <p>We are pleased to announce the return of “Talukder's Kitchen” at its new location. Come and enjoy the flavors of Bangladesh in our spacious and contemporary setting.</p>
-                        <button className='button-1'>Explore Menu</button>
+                        <Link to='/allrecipes'><button className='button-1'>Explore Menu</button></Link>
                     </div>
                 </div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center mb-4">
