@@ -9,6 +9,8 @@ import PrivateRoute from './pages/Login/Login/PrivateRoute/PrivateRoute';
 import AllFoods from './pages/AllFoods/AllFoods';
 import Order from './Order/Order';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
+import Blogs from './pages/Blogs/Blogs';
+import ContactUs from './pages/ContactUS/ContactUs';
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
             </Route>
             <Route path='/allrecipes'>
               <AllFoods></AllFoods>
+            </Route>
+            <Route path='/blogs'>
+              <Blogs></Blogs>
+            </Route>
+            <Route path='/contactUs'>
+              <ContactUs></ContactUs>
             </Route>
             <PrivateRoute path='/order/:orderId'>
               <Order></Order>
