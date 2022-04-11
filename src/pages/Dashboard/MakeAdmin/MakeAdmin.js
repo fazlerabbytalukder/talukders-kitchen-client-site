@@ -31,6 +31,7 @@ const MakeAdmin = () => {
     }
     return (
         <div className='container'>
+            <h2 style={{color:'white'}} className='text-center'>Make Admin</h2>
             <div className="row py-4">
                 <div className="col-md-6 d-flex flex-column justify-content-center">
                     <form onSubmit={handleAdminSubmit}>
