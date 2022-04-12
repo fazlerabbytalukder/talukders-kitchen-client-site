@@ -23,7 +23,7 @@ const Banner = () => {
                 </div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center mb-4">
                     <img className='img-fluid w-75' src={bannerimg} alt="" />
-                    <p className='horizontal-text'>ScrollDown-</p>
+                    <a style={{textDecoration:'none'}} className='horizontal-text scrollDown' href="#footer">ScrollDown-</a>
                 </div>
             </div>
         </div>

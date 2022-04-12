@@ -4,7 +4,7 @@ import spoon from '../../images/banner-image-t-kitchen-spoon.png';
 
 const Footer = () => {
     return (
-        <div className='container mb-5'>
+        <div className='container mb-5' id='footer'>
             <div className='mt-5'>
                 <small>Newsletter</small><br />
                 <img width="40px" src={spoon} alt="" />
