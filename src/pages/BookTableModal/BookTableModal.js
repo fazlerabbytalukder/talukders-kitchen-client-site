@@ -1,5 +1,6 @@
 import { Alert, Box, Button, Fade, Modal, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import useAuth from '../../Hooks/useAuth';
 import './BookTableModal.css';
 const style = {
     position: 'absolute',
@@ -63,7 +64,7 @@ const BookTableModal = ({ openBooking, handleBookingClose }) => {
             >
                 <Fade in={openBooking}>
                     <Box sx={style}>
-                        <h1 style={{color:'black'}} className='text-center'>Table Reservation</h1>
+                        <h1 style={{ color: 'black' }} className='text-center'>Table Reservation</h1>
                         <form
                             onSubmit={handleSubmit}
                             style={{
@@ -79,36 +80,36 @@ const BookTableModal = ({ openBooking, handleBookingClose }) => {
                                 required
                                 onChange={e => setYourName(e.target.value)}
                                 name="yourName"
-                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem' }} /> <br />
+                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem', border:'1px solid black' }} /> <br />
                             <TextField
                                 id="outlined-basic"
                                 placeholder="Phone Number"
                                 required
                                 onChange={e => setPhoneNumber(e.target.value)}
                                 name="phoneNumber"
-                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem' }} /> <br />
+                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem', border:'1px solid black' }} /> <br />
                             <TextField
                                 id="outlined-basic"
                                 placeholder="Number Of People"
                                 required
                                 onChange={e => setNumberOfPeople(e.target.value)}
                                 name="numberOfPeople"
-                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem' }} /> <br />
+                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem', border:'1px solid black' }} /> <br />
                             <TextField
                                 id="datetime-local"
                                 name="dateTime"
                                 onChange={e => setDateTime(e.target.value)}
                                 placeholder="Date/Time Your Reservation"
                                 type="datetime-local"
-                                
-                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem' }}
+
+                                sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem', border:'1px solid black' }}
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
                             />
                             {reservationSuccess && (
                                 <Alert
-                                    sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem', marginTop:'1.5rem' }}
+                                    sx={{ width: "100%", backgroundColor: "white", borderRadius: '.5rem', marginTop: '1.5rem', border:'1px solid black' }}
                                     severity="success"
                                 >
                                     Reservation Successfull

@@ -23,6 +23,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddFood from '../AddFood/AddFood';
 import useAuth from '../../../Hooks/useAuth';
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
+import ManageReservation from '../ManageReservation/ManageReservation';
 
 
 
@@ -52,6 +53,7 @@ function Dashboard(props) {
                     <Box className='text-start'>
                         <Link className='link-button' to={`${url}/makeAdmin`}><i class="fa-solid fa-user-gear ms-3 mb-4"></i> <Button color="inherit">Make Admin</Button></Link> <br />
                         <Link className='link-button' to={`${url}/addFood`}><i class="fa-solid fa-square-plus ms-3 mb-4"></i> <Button color="inherit">Add Food</Button></Link> <br />
+                        <Link className='link-button' to={`${url}/manageReservation`}><i class="fa-solid fa-gear ms-3 mb-4"></i> <Button color="inherit">Manage Rsv</Button></Link> <br />
                         <Link className='link-button' to={`${url}/manageAllOrders`}><i class="fa-solid fa-gear ms-3 mb-4"></i> <Button color="inherit">Manage All</Button></Link> <br />
                     </Box>
                     :
@@ -141,6 +143,9 @@ function Dashboard(props) {
                     </Route>
                     <Route exact path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
+                    </Route>
+                    <Route exact path={`${path}/manageReservation`}>
+                        <ManageReservation></ManageReservation>
                     </Route>
                     <Route exact path={`${path}/addFood`}>
                         <AddFood></AddFood>
