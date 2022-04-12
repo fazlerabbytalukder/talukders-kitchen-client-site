@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import spoon from '../../images/banner-image-t-kitchen-spoon.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -13,7 +14,7 @@ const Footer = () => {
                 <div className='d-flex justify-content-center align-items-center'>
                     <div class="input-group mb-3 w-50 text-center">
                         <input type="text" class="form-control from-design" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                        <button className='button-1' type="button" id="button-addon2">Subscribe</button>
+                        <Link to='/contactUs'><button className='button-1'>Subscribe</button></Link>
                     </div>
                 </div>
             </div>
