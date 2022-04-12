@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
     const [orderData, setOrderData] = useState([])
     const [approveId, setApproveId] = useState('');
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://blooming-wave-11730.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrderData(data));
     }, [approveId])
@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
     //update data pending to approved
     const handleUpdate = (id) => {
         
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://blooming-wave-11730.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -36,7 +36,7 @@ const ManageAllOrders = () => {
         setApproveId(id);
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://blooming-wave-11730.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -15,7 +15,7 @@ const Order = () => {
     const [order, setOrder] = useState([]);
     const { orderId } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/foods/${orderId}`)
+        fetch(`https://blooming-wave-11730.herokuapp.com/foods/${orderId}`)
             .then((res) => res.json())
             .then((data) => setOrder(data));
     }, [orderId]);
@@ -42,7 +42,7 @@ const Order = () => {
         // console.log(booking);
 
         //send data to the serer
-        fetch("http://localhost:5000/orders", {
+        fetch("https://blooming-wave-11730.herokuapp.com/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

@@ -31,7 +31,7 @@ const BookTableModal = ({ openBooking, handleBookingClose }) => {
         formData.append('dateTime', dateTime);
 
 
-        fetch('http://localhost:5000/booktable', {
+        fetch('https://blooming-wave-11730.herokuapp.com/booktable', {
             method: 'POST',
             body: formData
         })

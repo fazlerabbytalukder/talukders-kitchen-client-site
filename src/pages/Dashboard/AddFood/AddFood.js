@@ -23,7 +23,7 @@ const AddFood = () => {
         formData.append('img', img);
 
 
-        fetch('http://localhost:5000/foods', {
+        fetch('https://blooming-wave-11730.herokuapp.com/foods', {
             method: 'POST',
             body: formData
         })

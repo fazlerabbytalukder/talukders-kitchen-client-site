@@ -5,7 +5,7 @@ const ManageReservation = () => {
     const [reservationData, setReservationData] = useState([])
     const [approveId, setApproveId] = useState('');
     useEffect(() => {
-        fetch('http://localhost:5000/booktable')
+        fetch('https://blooming-wave-11730.herokuapp.com/booktable')
             .then(res => res.json())
             .then(data => setReservationData(data));
     }, [approveId])
@@ -16,7 +16,7 @@ const ManageReservation = () => {
         setApproveId(id);
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/booktable/${id}`;
+            const url = `https://blooming-wave-11730.herokuapp.com/booktable/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
