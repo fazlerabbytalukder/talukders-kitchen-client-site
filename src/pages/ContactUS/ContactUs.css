@@ -1,0 +1,37 @@
+.card-background{
+    border: 1px solid #DCCA87;
+    background-color: transparent;
+}
+
+.title-contactus{
+    color: #DCCA87;
+    font-weight: bold;
+}
+
+.from-design{
+    background-color: transparent;
+    border: 1px solid #DCCA87;
+}
+
+.card-body a{
+    color: #DCCA87;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button2{
+    background-color:#DCCA87;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight:'600';
+}
+
+.button2:hover{
+    background-color: transparent;
+    border: 2px solid #DCCA87;
+    border-radius: 0.4rem;
+    color: #DCCA87;
+}
