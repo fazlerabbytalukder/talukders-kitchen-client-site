@@ -3,10 +3,14 @@ import './Navigation.css';
 import Button from '@mui/material/Button';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import BookTableModal from '../../BookTableModal/BookTableModal';
 
 const Navigation = () => {
     const { user, logout } = useAuth();
     console.log(user);
+    const [openBooking, setBookingOpen] = React.useState(false);
+    const handleBookingOpen = () => setBookingOpen(true);
+    const handleBookingClose = () => setBookingOpen(false);
     return (
         <>
             <nav className="navbar container navbar-expand-lg navbar-light bg-transperent">
@@ -36,7 +40,7 @@ const Navigation = () => {
                                     <Link style={{ textDecoration: 'none' }} to='/dashboard'><Button className='button-common'>Dashboard</Button></Link>
                                     <Button style={{ textDecoration: 'none' }} onClick={logout} className='button-common'>Logout</Button>
                                     <h4>|</h4>
-                                    <Button style={{ textDecoration: 'none' }} onClick={logout} className='button-common button-1'>Book Table</Button>
+                                    <Button style={{ textDecoration: 'none' }} onClick={handleBookingOpen} className='button-common button-1'>Book Table</Button>
                                 </div>
                             </>
                                 :
@@ -45,6 +49,11 @@ const Navigation = () => {
                     </div>
                 </div>
             </nav>
+            <BookTableModal
+                handleBookingClose={handleBookingClose}
+                openBooking={openBooking}
+                user={user}
+            ></BookTableModal>
         </>
     );
 };
