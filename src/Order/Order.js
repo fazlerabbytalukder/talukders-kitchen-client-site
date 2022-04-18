@@ -146,8 +146,7 @@ const Order = () => {
                                 onBlur={handleOnBlur}
                                 label="Date/Time Your Order"
                                 type="datetime-local"
-                                defaultValue="2022-01-24T10:30"
-                                sx={{ width:"100%" }}
+                                sx={{ width:"100%", marginBottom:'8px' }}
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
@@ -158,7 +157,7 @@ const Order = () => {
                                         width: "100%",
                                         backgroundColor: "#DCCA87",
                                         border: "2px solid black",
-                                        margin: "5px 0",
+                                        marginTop: "6px",
                                     }}
                                     severity="success"
                                 >
