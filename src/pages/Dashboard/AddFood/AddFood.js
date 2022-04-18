@@ -1,36 +1,52 @@
-import { Autocomplete, Button, Input, TextField } from '@mui/material';
+import { Alert, Autocomplete, Button, Input, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import foodAddImg from '../../../images/food-added.png';
 
+const initialFood = {
+    foodName: "",
+    category: null,
+    price: 0,
+    star: 0,
+    img:''
+}
+
 const AddFood = () => {
-    const [foodName, setFoodName] = useState('');
-    const [categoryName, setCategoryName] = useState(null);
-    const [price, setPrice] = useState(0);
-    const [star, setStar] = useState(0);
-    const [img, setImg] = useState(null);
+
+    const [foodData, setFoodData] = useState(initialFood);
+    // const [foodName, setFoodName] = useState('');
+    // const [categoryName, setCategoryName] = useState(null);
+    // const [price, setPrice] = useState(0);
+    // const [star, setStar] = useState(0);
+    // const [img, setImg] = useState(null);
+    const [addFoodSuccess, setAddFoodSuccess] = useState(false);
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (!img) {
+        if (!foodData.img) {
             return;
         }
+        console.log(foodData);
 
-        const formData = new FormData();
-        formData.append('foodName', foodName);
-        formData.append('category', categoryName);
-        formData.append('price', price);
-        formData.append('star', star);
-        formData.append('img', img);
+        // const formData = new FormData();
+        // formData.append('foodName', foodName);
+        // formData.append('category', categoryName);
+        // formData.append('price', price);
+        // formData.append('star', star);
+        // formData.append('img', img);
 
 
         fetch('https://blooming-wave-11730.herokuapp.com/foods', {
+            headers: {
+                "content-type":"application/json"
+            },
             method: 'POST',
-            body: formData
+            body: JSON.stringify(foodData)
         })
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    console.log('Food added successfully');
+                    setAddFoodSuccess(true);
+                    setFoodData(initialFood);
                 }
             })
             .catch(error => {
@@ -47,13 +63,14 @@ const AddFood = () => {
                             id="outlined-basic"
                             placeholder="Food Name"
                             required
-                            onChange={e => setFoodName(e.target.value)}
+                            value={foodData.foodName}
+                            onChange={e => setFoodData({...foodData,foodName:e.target.value})}
                             name="foodName"
                             sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
                         <Autocomplete
                             size='small'
-                            value={categoryName}
-                            onChange={(e, newValue) => setCategoryName(newValue)}
+                            value={foodData.category}
+                            onChange={(e, newValue) => setFoodData({...foodData,category:newValue})}
                             options={["Fast-Food", "Lunch/Dinner"]}
                             sx={{ width: "100%", backgroundColor: "white", borderRadius:'.5rem'}}
                             getOptionLabel={(option) => option}
@@ -64,7 +81,8 @@ const AddFood = () => {
                             name="price"
                             type="number"
                             required
-                            onChange={e => setPrice(e.target.value)}
+                            value={foodData.price}
+                            onChange={e => setFoodData({...foodData,price:parseFloat(e.target.value)})}
                             placeholder="Food Price"
                             sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
                         <TextField
@@ -72,7 +90,8 @@ const AddFood = () => {
                             name="star"
                             type="number"
                             required
-                            onChange={e => setStar(e.target.value)}
+                            value={foodData.star}
+                            onChange={e => setFoodData({...foodData,star:parseFloat(e.target.value)})}
                             placeholder="Give Star"
                             sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} /> <br />
                         {/* <Input
@@ -84,9 +103,21 @@ const AddFood = () => {
                             id="outlined-basic"
                             name="img"
                             required
-                            onChange={e => setImg(e.target.value)}
+                            value={foodData.img}
+                            onChange={e => setFoodData({...foodData,img:e.target.value})}
                             placeholder="Set img-url"
-                            sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius:'.5rem' }} />
+                            sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius: '.5rem' }} />
+                        {addFoodSuccess && (
+                                <Alert
+                                sx={{ width: "100%", backgroundColor: "white", mb: 2, borderRadius: '.5rem' }}
+                                onClose={() => {
+                                    setAddFoodSuccess(false);
+                                }}
+                                    severity="success"
+                                >
+                                    Food added Successfully
+                                </Alert>
+                            )}
 
 
                         <Button className='button-1' type='submit'>
