@@ -159,6 +159,9 @@ const Order = () => {
                                         border: "2px solid black",
                                         marginTop: "6px",
                                     }}
+                                    onClose={() => {
+                                        setorderSuccess(false);
+                                }}
                                     severity="success"
                                 >
                                     Order Successfull
