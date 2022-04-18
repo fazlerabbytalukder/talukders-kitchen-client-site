@@ -79,7 +79,7 @@ const ManageAllOrders = () => {
                                 <TableCell align="center">{row.foodName}</TableCell>
                                 <TableCell align="center">{row.dateTime}</TableCell>
                                 <TableCell align="center">{row.status} {row.status === "pending" ? <i style={{color:'red'}} class="fa-solid fa-circle-check"></i> : <i style={{color:'green'}} className="fa-solid fa-circle-check"></i>}</TableCell>
-                                <TableCell align="center"><Button onClick={() => handleUpdate(row._id)} className="button-1">approve</Button></TableCell>
+                                <TableCell align="center"><Button onClick={() => handleUpdate(row._id)} className="button-1">{row.status === "pending" ? <span>Approve</span> : <span>Shipped</span>}</Button></TableCell>
                                 <TableCell align="center"><Button onClick={() => handleDelete(row._id)} className="button-1">Delete</Button></TableCell>
                             </TableRow>
                         ))}
